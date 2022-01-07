@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-icon
+      slot="end"
+      name="cart"
+      size="large"
+      class="ion-margin-horizontal"
+    ></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="bannerSlide">
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide *ngFor="let item of banner">
+        <div [ngStyle]="{'background-image':'url(' + item.banner + ')'}"></div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <ion-chip color="success">
+    <ion-label>Shop by categories</ion-label>
+  </ion-chip>
+
+  <div class="cards">
+    <ion-slides pager="false" [options]="cardOpts">
+      <ion-slide *ngFor="let item of category">
+        <div>
+          <ion-card>
+            <img src="{{item.img}}" alt="" />
+          </ion-card>
+          <ion-text color="dark">
+            <p style="font-size: 13px">{{item.title}}</p>
+          </ion-text>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div style="padding-top: 40px">
+    <ion-chip color="success">
+      <ion-label>Products</ion-label>
+    </ion-chip>
+  </div>
+  <ion-grid>
+    <ion-row class="ion-justify-content-start">
+      <ion-col size="6" *ngFor="let item of products">
+        <ion-card>
+          <img src="{{item.img}}" alt="" />
+          <div>
+            <b class="pName">{{item.name}}</b>
+            <p class="pPrice">RS.{{item.price}}</p>
+            <p class="pQuantity ion-text-right">{{item.quantity}} grams</p>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
