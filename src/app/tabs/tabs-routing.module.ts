@@ -1,3 +1,4 @@
+import { AppPage } from './../../../e2e/src/app.po';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
