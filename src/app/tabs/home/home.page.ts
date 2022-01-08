@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Products } from 'src/app/models/products.model';
 import { ApiService } from 'src/app/Services/api/api.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ApiService } from 'src/app/Services/api/api.service';
 export class HomePage {
   banner: any;
   category: any;
-  products: any;
+  products: Products[] = [];
   cardOpts = {
     initialSlide: 0,
     speed: 400,
