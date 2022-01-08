@@ -13,7 +13,7 @@ export class HomePage {
   cardOpts = {
     initialSlide: 0,
     speed: 400,
-    width: 120,
+    slidesPerView: 4,
   };
   slideOpts = {
     initialSlide: 0,

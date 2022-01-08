@@ -3,6 +3,9 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-title class="ion-text-center" style="font-family: cursive"
+      >Flower Shop</ion-title
+    >
     <ion-icon
       slot="end"
       name="cart"
@@ -46,7 +49,7 @@
   <ion-grid>
     <ion-row class="ion-justify-content-start">
       <ion-col size="6" *ngFor="let item of products">
-        <ion-card>
+        <ion-card style="border-radius: 10px">
           <img src="{{item.img}}" alt="" />
           <div>
             <b class="pName">{{item.name}}</b>

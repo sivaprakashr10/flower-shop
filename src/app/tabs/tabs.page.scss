@@ -1,1 +1,6 @@
-
+ion-tab-button {
+  --color-selected: var(
+    --ion-tab-bar-color-selected,
+    var(--ion-color-warning, #e5ff00)
+  );
+}
