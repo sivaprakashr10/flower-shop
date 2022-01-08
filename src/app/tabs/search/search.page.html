@@ -11,7 +11,11 @@
 </ion-header>
 
 <ion-content>
-  <ion-list lines="none" *ngIf="!isLoading && products.length == 0">
+  <app-empty-screen
+    *ngIf="query.length == 0"
+    [model]="model"
+  ></app-empty-screen>
+  <ion-list lines="none" *ngIf="query.length > 0 && products.length == 0">
     <ion-item> <h5>No search results for "{{query}}"</h5> </ion-item>
   </ion-list>
   <ion-grid>

@@ -1,3 +1,4 @@
+import { EmptyScreenComponent } from './empty-screen/empty-screen.component';
 import { ProductsComponent } from './products/products.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,7 +10,11 @@ import { ExploreContainerComponent } from './explore-container/explore-container
 
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule],
-  declarations: [ExploreContainerComponent, ProductsComponent],
-  exports: [ExploreContainerComponent, ProductsComponent],
+  declarations: [
+    ExploreContainerComponent,
+    ProductsComponent,
+    EmptyScreenComponent,
+  ],
+  exports: [ExploreContainerComponent, ProductsComponent, EmptyScreenComponent],
 })
 export class ComponentMoudle {}

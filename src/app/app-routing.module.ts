@@ -23,6 +23,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./tabs/profile/profile.module').then((m) => m.ProfilePageModule),
   },
+  {
+    path: 'item-page',
+    loadChildren: () => import('./pages/item-page/item-page.module').then( m => m.ItemPagePageModule)
+  },
 ];
 @NgModule({
   imports: [
