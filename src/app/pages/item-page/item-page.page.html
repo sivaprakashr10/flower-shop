@@ -5,36 +5,38 @@
       class="ion-margin-horizontal"
       name="arrow-back"
       id="backButton"
+      [routerLink]="['/', 'tabs','home']"
+      routerLinkActive="active"
+      routerDirection="root"
     ></ion-icon>
   </div>
-  <ion-slides pager="true">
-    <ion-slide>
-      <img src="assets/imgs/1.jpg" alt="" />
-    </ion-slide>
-  </ion-slides>
-  <ion-list lines="none" class="ion-no-margin">
-    <ion-list-header>
-      <ion-label
-        ><h1><b>Jasmin flower</b></h1></ion-label
-      >
-      <ion-chip color="success" mode="ios">
-        <ion-label>Category A</ion-label>
-      </ion-chip>
-    </ion-list-header>
+  <div *ngFor="let data of data">
+    <ion-slides pager="true">
+      <ion-slide>
+        <img [src]="data.image" alt="pic" />
+      </ion-slide>
+    </ion-slides>
+    <ion-list lines="none" class="ion-no-margin">
+      <ion-list-header>
+        <ion-label
+          ><h1><b>{{data.name}}</b></h1></ion-label
+        >
+        <ion-chip color="success" mode="ios">
+          <ion-label>{{data.category}}</ion-label>
+        </ion-chip>
+      </ion-list-header>
 
-    <ion-item style="margin-top: -6px">
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias,
-        harum?
-      </p>
-    </ion-item>
-    <ion-item style="margin-top: -16px">
-      <h2 class="ion-no-margin"><b>RS.100</b></h2>
-    </ion-item>
-    <ion-item class="ion-text-center">
-      <ion-button size="small" color="green">
-        Add <ion-icon slot="start" name="cart"></ion-icon
-      ></ion-button>
-    </ion-item>
-  </ion-list>
+      <ion-item style="margin-top: -6px">
+        <p>{{data.desc}}</p>
+      </ion-item>
+      <ion-item style="margin-top: -16px">
+        <h2 class="ion-no-margin"><b>RS.{{data.price}}</b></h2>
+      </ion-item>
+      <ion-item class="ion-text-center">
+        <ion-button size="small" color="green">
+          Add <ion-icon slot="start" name="cart"></ion-icon
+        ></ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

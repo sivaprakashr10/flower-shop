@@ -1,4 +1,8 @@
-<ion-card style="border-radius: 10px">
+<ion-card
+  style="border-radius: 10px"
+  [routerLink]="['/', 'item-page', product.id]"
+  routerDirection="forward"
+>
   <img [src]="product.image" alt="" />
   <div>
     <b class="pName">{{ product.name }}</b>

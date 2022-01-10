@@ -1,9 +1,29 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cart</ion-title>
+    <ion-title class="ion-text-center">My Cart</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <!-- <app-empty-screen [model]="model"></app-empty-screen> -->
+  <ion-item lines="none">
+    <ion-label>Items</ion-label>
+    <ion-chip color="primary">
+      <ion-label>Clear cart</ion-label>
+    </ion-chip>
+  </ion-item>
+  <ion-item lines="none" class="cartItem">
+    <ion-thumbnail slot="start">
+      <img src="assets/imgs/1.jpg" />
+    </ion-thumbnail>
+    <ion-label>
+      <h4>Voilet flower</h4>
+      <ion-text color="medium">
+        <p class="pStyle">100 grams</p>
+      </ion-text>
+      <span>
+        <h4>RS.100</h4>
+      </span>
+    </ion-label>
+  </ion-item>
 </ion-content>

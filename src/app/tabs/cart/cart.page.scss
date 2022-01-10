@@ -1,0 +1,21 @@
+.pStyle {
+  padding-bottom: 0.5vh;
+  font-size: 0.82rem !important;
+}
+
+.cartItem {
+  font-size: 0.8rem;
+  ion-thumbnail {
+    height: 9vh;
+    width: 20vw;
+    img {
+      border-radius: 5px;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  h4 {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}

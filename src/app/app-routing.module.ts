@@ -24,8 +24,11 @@ const routes: Routes = [
       import('./tabs/profile/profile.module').then((m) => m.ProfilePageModule),
   },
   {
-    path: 'item-page',
-    loadChildren: () => import('./pages/item-page/item-page.module').then( m => m.ItemPagePageModule)
+    path: 'item-page/:id',
+    loadChildren: () =>
+      import('./pages/item-page/item-page.module').then(
+        (m) => m.ItemPagePageModule
+      ),
   },
 ];
 @NgModule({

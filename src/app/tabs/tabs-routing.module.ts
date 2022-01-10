@@ -28,6 +28,7 @@ const routes: Routes = [
         loadChildren: () =>
           import('./profile/profile.module').then((m) => m.ProfilePageModule),
       },
+
       {
         path: '',
         redirectTo: '/tabs/home',
