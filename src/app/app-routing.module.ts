@@ -24,7 +24,7 @@ const routes: Routes = [
       import('./tabs/profile/profile.module').then((m) => m.ProfilePageModule),
   },
   {
-    path: 'item-page/:id',
+    path: 'products/:id',
     loadChildren: () =>
       import('./pages/item-page/item-page.module').then(
         (m) => m.ItemPagePageModule

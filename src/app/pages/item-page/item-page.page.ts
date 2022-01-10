@@ -14,6 +14,7 @@ export class ItemPagePage implements OnInit {
   data: any;
   productId: number;
   allProducts: Products[] = [];
+  isLoading: boolean = true;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -34,5 +35,9 @@ export class ItemPagePage implements OnInit {
       });
       console.log(this.data);
     }
+  }
+
+  onAdd() {
+    this.isLoading = false;
   }
 }
