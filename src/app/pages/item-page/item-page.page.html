@@ -10,7 +10,7 @@
       routerDirection="root"
     ></ion-icon>
   </div>
-  <div *ngFor="let data of data">
+  <div *ngFor="let data of data; let i = index">
     <ion-slides pager="true">
       <ion-slide>
         <img [src]="data.image" alt="pic" />
@@ -42,16 +42,29 @@
     >
       Add <ion-icon slot="start" name="cart"></ion-icon
     ></ion-button>
-    <ion-button
-      *ngIf="!isLoading"
-      color="success"
+    <ion-buttons
+      *ngIf="!isLoading && count > 0"
       shape="round"
       class="ion-margin-horizontal"
+      size="small"
     >
-      <ion-icon slot="start" name="remove-outline"></ion-icon>
-      <ion-text color="light" class="ion-margin-horizontal"> 1 </ion-text>
-      <ion-icon slot="end" name="add-outline"></ion-icon>
-    </ion-button>
+      <ion-button
+        fill="outline"
+        color="dark"
+        class="ion-text-center"
+        (click)="quantityMinus( data, i)"
+      >
+        <ion-icon name="remove-outline" color="danger"></ion-icon>
+      </ion-button>
+      <ion-button fill="outline" color="dark">
+        <ion-text color="dark" class="ion-margin-horizontal">
+          {{count}}
+        </ion-text>
+      </ion-button>
+      <ion-button fill="outline" color="dark" (click)="quantityPlus(data, i)">
+        <ion-icon name="add-outline" color="success"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </div>
 </ion-content>
 <ion-footer>

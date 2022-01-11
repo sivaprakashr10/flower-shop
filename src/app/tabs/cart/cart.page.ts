@@ -10,7 +10,15 @@ export class CartPage implements OnInit {
     icon: 'cart-outline',
     title: 'Your cart is empty',
   };
+  count: number = 1;
   constructor() {}
 
   ngOnInit() {}
+
+  quantityPlus() {
+    this.count += 1;
+  }
+  quantityMinus() {
+    this.count -= 1;
+  }
 }

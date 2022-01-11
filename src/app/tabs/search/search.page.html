@@ -1,12 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-searchbar
-      placeholder="Search"
-      animated="true"
-      #searchInput
-      debounce="500"
-      (ionChange)="onSearchChange($event)"
-    ></ion-searchbar>
+    <ion-row class="ion-justify-content-center">
+      <ion-col sizeXs="12" sizeMd="5">
+        <ion-searchbar
+          placeholder="Search"
+          animated="true"
+          #searchInput
+          debounce="500"
+          (ionChange)="onSearchChange($event)"
+        ></ion-searchbar>
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
@@ -20,7 +24,7 @@
   </ion-list>
   <ion-grid>
     <ion-row>
-      <ion-col size="6" *ngFor="let product of products">
+      <ion-col sizeXs="6" sizeMd="2" *ngFor="let product of products">
         <app-products
           [product]="product"
           [routerLink]="['/', 'item-page', product.id]"

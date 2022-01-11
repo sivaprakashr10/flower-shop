@@ -1,3 +1,5 @@
+import { CartService } from './../../Services/cart/cart.service';
+import { GlobalService } from './../../Services/global/global.service';
 import { element } from 'protractor';
 import { ApiService } from 'src/app/Services/api/api.service';
 import { Products } from 'src/app/models/products.model';
@@ -15,10 +17,14 @@ export class ItemPagePage implements OnInit {
   productId: number;
   allProducts: Products[] = [];
   isLoading: boolean = true;
+  count: number = 1;
+  model: {};
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private api: ApiService
+    private api: ApiService,
+    private global: GlobalService,
+    private cart: CartService
   ) {}
 
   ngOnInit() {
@@ -39,5 +45,19 @@ export class ItemPagePage implements OnInit {
 
   onAdd() {
     this.isLoading = false;
+  }
+
+  quantityPlus(data, index) {
+    console.log(data, index);
+    if (data) {
+      this.count += 1;
+    }
+  }
+
+  quantityMinus(data, index) {
+    console.log(data, index);
+    if (data) {
+      this.count -= 1;
+    }
   }
 }

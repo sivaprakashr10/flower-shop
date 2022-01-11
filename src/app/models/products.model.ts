@@ -7,6 +7,7 @@ export class Products {
     public price: string,
     public quantity: string,
     public image: string,
-    public short_name: string
+    public short_name: string,
+    public count?: string
   ) {}
 }
