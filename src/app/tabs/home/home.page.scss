@@ -1,25 +1,51 @@
+// sets
+
+$gl-ms: "screen and (max-width: 23.5em)"; // up to 360px
+$gl-xs: "screen and (max-width: 35.5em)"; // up to 568px
+$gl-sm: "screen and (max-width: 48em)"; // max 768px
+$gl-md: "screen and (max-width: 64em)"; // max 1024px
+$gl-lg: "screen and (max-width: 80em)"; // max 1280px
+
+@media #{$gl-lg} {
+  .bannerSlide {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    ion-slides {
+      --bullet-background: black;
+      height: 20vh;
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: inherit;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media #{$gl-xs} {
+  .bannerSlide {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    ion-slides {
+      --bullet-background: black;
+      height: 20vh;
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: inherit;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
 ion-header {
   ion-icon {
     font-size: 1rem;
   }
 }
-.bannerSlide {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  ion-slides {
-    --bullet-background: black;
-    height: 20vh;
-    div {
-      height: 20vh;
-      width: 94%;
-      margin: auto;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      border-radius: 5px;
-    }
-  }
-}
+
 .cards {
   ion-card {
     height: 80px;
@@ -47,7 +73,7 @@ ion-header {
   font-size: 16px;
 }
 
-img {
+.category {
   height: 100px;
   width: -moz-available;
 }

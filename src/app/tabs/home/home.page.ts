@@ -19,7 +19,7 @@ export class HomePage {
   slideOpts = {
     initialSlide: 0,
     speed: 400,
-    autoplay: true,
+    autoplay: false,
     loop: true,
   };
   constructor(private api: ApiService) {}

@@ -19,7 +19,7 @@
   <div class="bannerSlide">
     <ion-slides pager="true" [options]="slideOpts">
       <ion-slide *ngFor="let item of banner">
-        <div [ngStyle]="{'background-image':'url(' + item.banner + ')'}"></div>
+        <img [src]="item.banner" alt="" />
       </ion-slide>
     </ion-slides>
   </div>
@@ -32,7 +32,7 @@
       <ion-slide *ngFor="let item of category">
         <div>
           <ion-card>
-            <img src="{{item.image}}" alt="" />
+            <img src="{{item.image}}" alt="" class="category" />
           </ion-card>
           <ion-text color="dark">
             <p style="font-size: 13px">{{item.title}}</p>

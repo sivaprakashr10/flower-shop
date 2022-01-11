@@ -11,11 +11,14 @@
     ></ion-icon>
   </div>
   <div *ngFor="let data of data; let i = index">
-    <ion-slides pager="true">
+    <!-- <ion-slides pager="true">
       <ion-slide>
         <img [src]="data.image" alt="pic" />
       </ion-slide>
-    </ion-slides>
+    </ion-slides> -->
+    <ion-card class="ion-no-margin">
+      <img [src]="data.image" alt="" />
+    </ion-card>
     <ion-list lines="none" class="ion-no-margin">
       <ion-list-header>
         <ion-label
