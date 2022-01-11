@@ -1,0 +1,19 @@
+ion-thumbnail {
+  height: 67px;
+  width: 73px;
+}
+
+img {
+  border-radius: 15px;
+}
+
+.profile {
+  ion-thumbnail {
+    height: 67px;
+    width: 73px;
+    margin-left: auto;
+    img {
+      border-radius: 15px;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="ion-text-center">My Cart</ion-title>
+    <ion-title class="ion-text-center"><b>My Cart</b></ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,12 +12,13 @@
       <ion-label>Clear cart</ion-label>
     </ion-chip>
   </ion-item>
-  <ion-item class="cartItem">
+
+  <ion-item class="cartItem" lines="full">
     <ion-thumbnail slot="start">
-      <img src="assets/imgs/1.jpg" />
+      <img src="assets/imgs/2.jpg" />
     </ion-thumbnail>
     <ion-label>
-      <h4>Voilet flower</h4>
+      <h4>Sun flower</h4>
       <ion-text color="medium">
         <p class="pStyle">100 grams</p>
       </ion-text>
@@ -28,15 +29,62 @@
     <ion-button color="success" shape="round" class="ion-margin-horizontal">
       <ion-icon
         slot="start"
-        name="add-outline"
+        name="remove-outline"
         style="margin-left: 5px"
       ></ion-icon>
       <ion-text color="light" class="ion-margin-horizontal"> 1 </ion-text>
       <ion-icon
         slot="end"
-        name="remove-outline"
+        name="add-outline"
         style="margin-right: 5px"
       ></ion-icon>
     </ion-button>
   </ion-item>
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label><b>Bill Details</b></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Items Total</ion-label>
+      <ion-text color="dark" slot="end"> ₹100 </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Delivery Charge</ion-label>
+      <ion-text color="dark" slot="end"> ₹50 </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>To Pay</ion-label>
+      <ion-text color="dark" slot="end"> ₹150 </ion-text>
+    </ion-item>
+  </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item lines="none" color="light">
+      <ion-button slot="end" size="small" fill="clear">CHANGE</ion-button>
+      <ion-icon slot="start" name="home-outline"></ion-icon>
+      <ion-label>
+        <h5>Deliver to HOME</h5>
+        <ion-text color="medium"><p>Chitra Coimbatore</p></ion-text>
+      </ion-label>
+    </ion-item>
+    <ion-row>
+      <ion-col size="6" style="background-color: rgb(34, 36, 40)">
+        <ion-item lines="none" color="dark">
+          <ion-label>Grand Total</ion-label>
+          <ion-text color="light"> ₹150 </ion-text>
+        </ion-item>
+      </ion-col>
+      <ion-col
+        size="6"
+        style="background-color: rgb(255, 238, 0)"
+        class="ion-text-center"
+      >
+        <ion-button fill="clear" color="dark" style="text-transform: none">
+          Make Payment
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
