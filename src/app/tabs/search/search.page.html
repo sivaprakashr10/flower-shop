@@ -27,7 +27,7 @@
       <ion-col sizeXs="6" sizeMd="2" *ngFor="let product of products">
         <app-products
           [product]="product"
-          [routerLink]="['/', 'item-page', product.id]"
+          [routerLink]="['/', 'products', product.id]"
         ></app-products>
       </ion-col>
     </ion-row>

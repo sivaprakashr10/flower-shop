@@ -11,63 +11,67 @@
     ></ion-icon>
   </div>
   <div *ngFor="let data of data; let i = index">
-    <!-- <ion-slides pager="true">
-      <ion-slide>
-        <img [src]="data.image" alt="pic" />
-      </ion-slide>
-    </ion-slides> -->
-    <ion-card class="ion-no-margin">
-      <img [src]="data.image" alt="" />
-    </ion-card>
-    <ion-list lines="none" class="ion-no-margin">
-      <ion-list-header>
-        <ion-label
-          ><h1><b>{{data.name}}</b></h1></ion-label
-        >
-        <ion-chip color="success" mode="ios">
-          <ion-label>{{data.category}}</ion-label>
-        </ion-chip>
-      </ion-list-header>
+    <ion-row class="ion-justify-content-center">
+      <ion-col sizeXs="12" sizeMd="4" sizeLg="5">
+        <div>
+          <img [src]="data.image" alt="" />
+        </div>
 
-      <ion-item style="margin-top: -6px">
-        <p>{{data.desc}}</p>
-      </ion-item>
-      <ion-item style="margin-top: -16px">
-        <h2 class="ion-no-margin"><b>RS.{{data.price}}</b></h2>
-      </ion-item>
-    </ion-list>
-    <ion-button
-      *ngIf="isLoading"
-      color="success"
-      shape="round"
-      class="ion-margin-horizontal"
-      (click)="onAdd()"
-    >
-      Add <ion-icon slot="start" name="cart"></ion-icon
-    ></ion-button>
-    <ion-buttons
-      *ngIf="!isLoading && count > 0"
-      shape="round"
-      class="ion-margin-horizontal"
-      size="small"
-    >
-      <ion-button
-        fill="outline"
-        color="dark"
-        class="ion-text-center"
-        (click)="quantityMinus( data, i)"
-      >
-        <ion-icon name="remove-outline" color="danger"></ion-icon>
-      </ion-button>
-      <ion-button fill="outline" color="dark">
-        <ion-text color="dark" class="ion-margin-horizontal">
-          {{count}}
-        </ion-text>
-      </ion-button>
-      <ion-button fill="outline" color="dark" (click)="quantityPlus(data, i)">
-        <ion-icon name="add-outline" color="success"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+        <ion-list lines="none" class="ion-no-margin">
+          <ion-list-header>
+            <ion-label
+              ><h1><b>{{data.name}}</b></h1></ion-label
+            >
+            <ion-chip color="success" mode="ios">
+              <ion-label>{{data.category}}</ion-label>
+            </ion-chip>
+          </ion-list-header>
+
+          <ion-item style="margin-top: -6px">
+            <p>{{data.desc}}</p>
+          </ion-item>
+          <ion-item style="margin-top: -16px">
+            <h2 class="ion-no-margin"><b>RS.{{data.price}}</b></h2>
+          </ion-item>
+        </ion-list>
+        <ion-button
+          *ngIf="isLoading"
+          color="success"
+          shape="round"
+          class="ion-margin-horizontal"
+          (click)="onAdd()"
+        >
+          Add <ion-icon slot="start" name="cart"></ion-icon
+        ></ion-button>
+        <ion-buttons
+          *ngIf="!isLoading && count > 0"
+          shape="round"
+          class="ion-margin-horizontal"
+          size="small"
+        >
+          <ion-button
+            fill="outline"
+            color="dark"
+            class="ion-text-center"
+            (click)="quantityMinus( data, i)"
+          >
+            <ion-icon name="remove-outline" color="danger"></ion-icon>
+          </ion-button>
+          <ion-button fill="outline" color="dark">
+            <ion-text color="dark" class="ion-margin-horizontal">
+              {{count}}
+            </ion-text>
+          </ion-button>
+          <ion-button
+            fill="outline"
+            color="dark"
+            (click)="quantityPlus(data, i)"
+          >
+            <ion-icon name="add-outline" color="success"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
   </div>
 </ion-content>
 <ion-footer>

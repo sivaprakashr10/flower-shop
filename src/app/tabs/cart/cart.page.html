@@ -29,21 +29,26 @@
             <h4>RS.100</h4>
           </span>
         </ion-label>
-        <ion-buttons shape="round" class="ion-margin-horizontal" size="small">
+        <ion-buttons shape="round">
           <ion-button
             fill="outline"
             color="dark"
-            class="ion-text-center"
+            class="ion-text-center quantityButton"
             (click)="quantityMinus( )"
           >
             <ion-icon name="remove-outline" color="danger"></ion-icon>
           </ion-button>
-          <ion-button fill="outline" color="dark">
-            <ion-text color="dark" class="ion-margin-horizontal">
+          <ion-button fill="outline" color="dark" class="quantityButton">
+            <ion-text color="dark" style="font-size: medium">
               {{count}}
             </ion-text>
           </ion-button>
-          <ion-button fill="outline" color="dark" (click)="quantityPlus()">
+          <ion-button
+            fill="outline"
+            color="dark"
+            (click)="quantityPlus()"
+            class="quantityButton"
+          >
             <ion-icon name="add-outline" color="success"></ion-icon>
           </ion-button>
         </ion-buttons>

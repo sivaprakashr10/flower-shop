@@ -13,11 +13,14 @@ $gl-lg: "screen and (max-width: 80em)"; // max 1280px
     ion-slides {
       --bullet-background: black;
       height: 20vh;
-      img {
-        height: 100%;
-        object-fit: cover;
-        width: inherit;
-        border-radius: 10px;
+      div {
+        height: 20vh;
+        width: 94%;
+        margin: auto;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 5px;
       }
     }
   }
@@ -30,11 +33,14 @@ $gl-lg: "screen and (max-width: 80em)"; // max 1280px
     ion-slides {
       --bullet-background: black;
       height: 20vh;
-      img {
-        height: 100%;
-        object-fit: cover;
-        width: inherit;
-        border-radius: 10px;
+      div {
+        height: 20vh;
+        width: 94%;
+        margin: auto;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 5px;
       }
     }
   }
