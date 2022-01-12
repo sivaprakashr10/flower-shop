@@ -12,22 +12,27 @@ export class ApiService {
 
   categories = [
     {
+      id: '1',
       title: 'Category 1',
       image: 'assets/imgs/5.jpg',
     },
     {
+      id: '2',
       title: 'Category 2',
       image: 'assets/imgs/6.jpg',
     },
     {
+      id: '3',
       title: 'Category 3',
       image: 'assets/imgs/7.jpg',
     },
     {
+      id: '4',
       title: 'Category 4',
       image: 'assets/imgs/8.jpg',
     },
     {
+      id: '5',
       title: 'Category 5',
       image: 'assets/imgs/9.jpg',
     },

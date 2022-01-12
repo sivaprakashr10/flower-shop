@@ -1,15 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
-  <div>
-    <ion-icon
-      style="z-index: 100"
-      class="ion-margin-horizontal"
-      name="arrow-back"
-      id="backButton"
-      [routerLink]="['/', 'tabs','home']"
-      routerLinkActive="active"
-      routerDirection="root"
-    ></ion-icon>
-  </div>
   <div *ngFor="let data of data; let i = index">
     <ion-row class="ion-justify-content-center">
       <ion-col sizeXs="12" sizeMd="4" sizeLg="5">

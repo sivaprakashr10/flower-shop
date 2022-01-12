@@ -1,3 +1,4 @@
+import { Categories } from './../../models/categories.model';
 import { Component, OnInit } from '@angular/core';
 import { Products } from 'src/app/models/products.model';
 import { ApiService } from 'src/app/Services/api/api.service';
@@ -9,7 +10,7 @@ import { ApiService } from 'src/app/Services/api/api.service';
 })
 export class HomePage {
   banner: any;
-  category: any;
+  categories: Categories[] = [];
   products: Products[] = [];
   cardOpts = {
     initialSlide: 0,
@@ -25,7 +26,7 @@ export class HomePage {
   constructor(private api: ApiService) {}
   ngOnInit() {
     this.banner = this.api.banners;
-    this.category = this.api.categories;
+    this.categories = this.api.categories;
     this.products = this.api.products;
   }
 }

@@ -12,7 +12,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./item-page.page.scss'],
 })
 export class ItemPagePage implements OnInit {
-  // @Input() data: Products;
   data: any;
   productId: number;
   allProducts: Products[] = [];

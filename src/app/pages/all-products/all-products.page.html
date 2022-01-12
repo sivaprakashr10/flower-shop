@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+      <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title class="ion-text-center"><b>Products</b></ion-title>
   </ion-toolbar>
@@ -9,7 +9,13 @@
 
 <ion-content>
   <ion-row>
-    <ion-col sizeXs="6" sizeMd="4" sizeLg="2" *ngFor="let product of products">
+    <ion-col
+      sizeXs="6"
+      sizeMd="4"
+      sizeLg="2"
+      sizeSm="3"
+      *ngFor="let product of products"
+    >
       <app-products
         [product]="product"
         [routerLink]="['/', 'products', product.id]"
