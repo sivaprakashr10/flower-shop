@@ -2,6 +2,7 @@ import { ApiService } from './../../Services/api/api.service';
 import { Products } from './../../models/products.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Categories } from 'src/app/models/categories.model';
 
 @Component({
   selector: 'app-all-products',
@@ -12,9 +13,24 @@ export class AllProductsPage implements OnInit {
   urlCheck: any;
   url: any;
   products: Products[] = [];
+  categories: Categories[] = [];
+  slideOpts = { initialSlide: 0, speed: 400, slidesPerView: 3 };
   constructor(private api: ApiService, private router: Router) {}
 
   ngOnInit() {
     this.products = this.api.products;
+    this.categories = this.api.categories;
+  }
+
+  filterCategory(category) {
+    console.log(category.title);
+    this.products = [];
+    if (category.title === 'All') {
+      this.products = this.api.products;
+    } else {
+      this.products = this.api.products.filter((x) => {
+        return x.category == category.title;
+      });
+    }
   }
 }

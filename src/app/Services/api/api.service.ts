@@ -12,6 +12,11 @@ export class ApiService {
 
   categories = [
     {
+      id: '0',
+      title: 'All',
+      image: 'assets/imgs/5.jpg',
+    },
+    {
       id: '1',
       title: 'Category 1',
       image: 'assets/imgs/5.jpg',
@@ -41,7 +46,7 @@ export class ApiService {
   products = [
     {
       id: '1',
-      category: 'Categorey A',
+      category: 'Category 1',
       name: 'Voilets',
       desc: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias,
       harum?`,
@@ -52,7 +57,7 @@ export class ApiService {
     },
     {
       id: '2',
-      category: 'Categorey A',
+      category: 'Category 1',
       name: 'Sun Flower',
       desc: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias,
       harum?`,
@@ -63,7 +68,7 @@ export class ApiService {
     },
     {
       id: '3',
-      category: 'Categorey B',
+      category: 'Category 2',
       name: 'jasmine',
       desc: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias,
       harum?`,
@@ -74,7 +79,7 @@ export class ApiService {
     },
     {
       id: '4',
-      category: 'Categorey B',
+      category: 'Category 2',
       name: 'Poo Maalai',
       desc: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias,
       harum?`,
@@ -85,7 +90,7 @@ export class ApiService {
     },
     {
       id: '5',
-      category: 'Categorey C',
+      category: 'Category 3',
       name: 'Wedding',
       desc: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias,
       harum?`,
@@ -96,7 +101,7 @@ export class ApiService {
     },
     {
       id: '6',
-      category: 'Categorey C',
+      category: 'Category 3',
       name: 'Thulasi Maalai',
       desc: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias,
       harum?`,
