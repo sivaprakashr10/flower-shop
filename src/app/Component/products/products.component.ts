@@ -8,6 +8,7 @@ import { Products } from 'src/app/models/products.model';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit {
+  defaultImage = './assets/imgs/default.jpg';
   @Input() product: Products;
   constructor() {}
 

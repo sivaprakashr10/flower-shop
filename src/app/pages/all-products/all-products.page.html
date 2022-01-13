@@ -8,18 +8,22 @@
 </ion-header>
 
 <ion-content>
-  <ion-slides pager="false" [options]="slideOpts" class="ion-margin-top">
-    <ion-slide *ngFor="let category of categories">
-      <ion-button
-        fill="outline"
-        color="success"
-        style="text-transform: none"
-        (click)="filterCategory(category)"
-      >
-        {{category.title}}
-      </ion-button>
-    </ion-slide>
-  </ion-slides>
+  <ion-row class="ion-justify-content-center">
+    <ion-col sizeXs="12" sizeMd="4" sizeLg="10" sizeSm="3">
+      <ion-slides pager="false" [options]="slideOpts" class="ion-margin-top">
+        <ion-slide *ngFor="let category of categories">
+          <ion-button
+            fill="outline"
+            color="success"
+            style="text-transform: none"
+            (click)="filterCategory(category)"
+          >
+            {{category.title}}
+          </ion-button>
+        </ion-slide>
+      </ion-slides>
+    </ion-col>
+  </ion-row>
   <ion-row>
     <ion-col
       sizeXs="6"

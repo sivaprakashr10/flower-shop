@@ -14,7 +14,7 @@ export class AllProductsPage implements OnInit {
   url: any;
   products: Products[] = [];
   categories: Categories[] = [];
-  slideOpts = { initialSlide: 0, speed: 400, slidesPerView: 3 };
+  slideOpts = { initialSlide: 0, speed: 400, slidesPerView: 2.5 };
   constructor(private api: ApiService, private router: Router) {}
 
   ngOnInit() {
@@ -23,9 +23,8 @@ export class AllProductsPage implements OnInit {
   }
 
   filterCategory(category) {
-    console.log(category.title);
     this.products = [];
-    if (category.title === 'All') {
+    if (category.id === '0') {
       this.products = this.api.products;
     } else {
       this.products = this.api.products.filter((x) => {

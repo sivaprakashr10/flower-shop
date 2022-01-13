@@ -3,7 +3,7 @@
   [routerLink]="['/', 'products', product.id]"
   routerDirection="forward"
 >
-  <img [src]="product.image" alt="" />
+  <img [defaultImage]="defaultImage" [lazyLoad]="product.image" />
   <div>
     <b class="pName">{{ product.name }}</b>
     <p class="pPrice">RS.{{ product.price }}</p>
