@@ -14,7 +14,7 @@ export class AllProductsPage implements OnInit {
   url: any;
   products: Products[] = [];
   categories: Categories[] = [];
-  slideOpts = { initialSlide: 0, speed: 400, slidesPerView: 2.5 };
+  slideOpts = { initialSlide: 0, speed: 400, slidesPerView: 3.2 };
   constructor(private api: ApiService, private router: Router) {}
 
   ngOnInit() {

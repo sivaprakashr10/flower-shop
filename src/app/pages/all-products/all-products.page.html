@@ -12,14 +12,12 @@
     <ion-col sizeXs="12" sizeMd="4" sizeLg="10" sizeSm="3">
       <ion-slides pager="false" [options]="slideOpts" class="ion-margin-top">
         <ion-slide *ngFor="let category of categories">
-          <ion-button
-            fill="outline"
-            color="success"
-            style="text-transform: none"
+          <ion-chip
+            color="{{category.color}}"
             (click)="filterCategory(category)"
           >
-            {{category.title}}
-          </ion-button>
+            <ion-label>{{category.title}}</ion-label>
+          </ion-chip>
         </ion-slide>
       </ion-slides>
     </ion-col>

@@ -1,17 +1,37 @@
-ion-thumbnail {
-  margin-left: 125px;
-  margin-top: 10px;
-  height: 100px;
-  width: 101px;
-  img {
-    border-radius: 25px;
+// sets
+
+$gl-ms: "screen and (max-width: 23.5em)"; // up to 360px
+$gl-xs: "screen and (max-width: 35.5em)"; // up to 568px
+$gl-sm: "screen and (max-width: 48em)"; // max 768px
+$gl-md: "screen and (max-width: 64em)"; // max 1024px
+$gl-lg: "screen and (max-width: 80em)"; // max 1280px
+
+@media #{$gl-sm} {
+  ion-thumbnail {
+    margin-left: 125px;
+    margin-top: 10px;
+    height: 100px;
+    width: 101px;
+    img {
+      border-radius: 25px;
+    }
+  }
+  ion-title {
+    margin-left: 50px;
+  }
+
+  ion-list-header {
+    color: cornflowerblue;
   }
 }
 
-ion-list-header {
-  color: cornflowerblue;
-}
-
-ion-title {
-  margin-left: 50px;
+@media #{$gl-lg} {
+  ion-thumbnail {
+    margin: auto;
+    height: 100px;
+    width: 101px;
+    img {
+      border-radius: 25px;
+    }
+  }
 }

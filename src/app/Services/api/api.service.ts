@@ -13,7 +13,7 @@ export class ApiService {
   categories = [
     {
       id: '0',
-      title: 'All Products',
+      title: 'All',
       image: 'assets/imgs/5.jpg',
       color: 'primary',
     },

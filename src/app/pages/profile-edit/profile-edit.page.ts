@@ -11,7 +11,7 @@ export class ProfileEditPage implements OnInit {
 
   ngOnInit() {}
   onSubmit(form: NgForm) {
-    console.log(form);
+    console.log(form.value);
   }
 
   onClose() {

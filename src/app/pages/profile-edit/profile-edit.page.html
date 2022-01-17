@@ -14,13 +14,19 @@
 <ion-content>
   <ion-grid>
     <form #f1="ngForm" (ngSubmit)="onSubmit(f1)">
-      <ion-row class="ion-justify-content-center">
-        <ion-col sizeXs="12" sizeLg="6">
+      <ion-row>
+        <ion-col size="12">
           <ion-thumbnail>
             <img src="assets/imgs/1.jpg" />
           </ion-thumbnail>
           <div class="ion-text-center ion-margin-top">
-            <ion-text class="ion-text-center">Phone: 8667069235</ion-text>
+            <ion-chip color="primary">
+              <ion-label>
+                <ion-text class="ion-text-center"
+                  >Phone: 8667069235</ion-text
+                ></ion-label
+              >
+            </ion-chip>
           </div>
           <ion-list lines="none">
             <ion-list-header> First Name </ion-list-header>
