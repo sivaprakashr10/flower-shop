@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><b>Edit Profile</b></ion-title>
+    <ion-icon
+      slot="start"
+      size="large"
+      class="ion-margin-horizontal"
+      name="arrow-back"
+      (click)="onClose()"
+    ></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <form #f1="ngForm" (ngSubmit)="onSubmit(f1)">
+      <ion-row class="ion-justify-content-center">
+        <ion-col sizeXs="12" sizeLg="6">
+          <ion-thumbnail>
+            <img src="assets/imgs/1.jpg" />
+          </ion-thumbnail>
+          <div class="ion-text-center ion-margin-top">
+            <ion-text class="ion-text-center">Phone: 8667069235</ion-text>
+          </div>
+          <ion-list lines="none">
+            <ion-list-header> First Name </ion-list-header>
+            <ion-item color="light">
+              <ion-input
+                type="text"
+                ngModel
+                name="firstName"
+                #fnameCtrl
+                placeholder="fiirst name"
+              >
+              </ion-input>
+            </ion-item>
+            <ion-list-header> Last Name </ion-list-header>
+            <ion-item color="light">
+              <ion-input
+                type="text"
+                ngModel
+                name="lastName"
+                #lnameCtrl
+                placeholder="last name"
+                required
+              >
+              </ion-input>
+            </ion-item>
+            <ion-list-header>Email</ion-list-header>
+            <ion-item color="light" class="ion-margin-bottom">
+              <ion-input
+                type="email"
+                ngModel
+                name="email"
+                #emailCtrl
+                placeholder="email"
+                required
+              >
+              </ion-input>
+            </ion-item>
+            <div class="ion-text-center">
+              <ion-button
+                (click)="onSubmit(f1)"
+                shape="round"
+                [disabled]="!f1.valid"
+              >
+                Submit
+              </ion-button>
+            </div>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>

@@ -15,31 +15,37 @@ export class ApiService {
       id: '0',
       title: 'All Products',
       image: 'assets/imgs/5.jpg',
+      color: 'primary',
     },
     {
       id: '1',
       title: 'Category 1',
       image: 'assets/imgs/5.jpg',
+      color: 'success',
     },
     {
       id: '2',
       title: 'Category 2',
       image: 'assets/imgs/6.jpg',
+      color: 'warning',
     },
     {
       id: '3',
       title: 'Category 3',
       image: 'assets/imgs/7.jpg',
+      color: 'danger',
     },
     {
       id: '4',
       title: 'Category 4',
       image: 'assets/imgs/8.jpg',
+      color: 'tertiary',
     },
     {
       id: '5',
       title: 'Category 5',
       image: 'assets/imgs/9.jpg',
+      color: 'dark',
     },
   ];
 

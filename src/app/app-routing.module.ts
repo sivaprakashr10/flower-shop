@@ -38,6 +38,13 @@ const routes: Routes = [
         (m) => m.AllProductsPageModule
       ),
   },
+  {
+    path: 'profile-edit',
+    loadChildren: () =>
+      import('./pages/profile-edit/profile-edit.module').then(
+        (m) => m.ProfileEditPageModule
+      ),
+  },
 ];
 @NgModule({
   imports: [
